@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plant_app_ui/Screens/plants_list.dart';
@@ -88,7 +86,7 @@ class Home extends StatelessWidget {
 
 
            ],),
-            Container(margin:const EdgeInsets.only(top: 72,left: 327),height:24,width:24,decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.elliptical(24, 24),),color: const Color(0XFFFFFFFF).withOpacity(0.6)),child: const Icon(Icons.close_rounded,size: 15,color: Color(0XFFD3B398),),),
+            Container(margin:const EdgeInsets.only(top: 72,left: 327),height:24,width:24,decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.elliptical(24, 24),),color: const Color(0XFFFFFFFF).withOpacity(0.6)),child: InkWell(  onTap:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>const PlantsList()));},child: const Icon(Icons.close_rounded,size: 15,color: Color(0XFFD3B398),)),),
             Padding(
               padding: const EdgeInsets.only(top: 472),
               child: Column(
@@ -133,16 +131,15 @@ class Home extends StatelessWidget {
                   const SizedBox(
                     height: 65,
                   ),
-                  InkWell(
-                    onTap:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>const PlantsList()));},
-                    child: Container(
+                    
+               Container(
                       height: 5,
                       width: 134,
                       decoration: BoxDecoration(
                           color: const Color(0XFF000000),
                           borderRadius: BorderRadius.circular(100)),
                     ),
-                  )
+                  
                 ],
               ),
             )
